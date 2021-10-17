@@ -14,16 +14,41 @@ body {
     font-weight: 400;
     height: 100vh;
     color: hsl(229, 7%, 55%);
-    background: url(images/bg-desktop.png) no-repeat;
-    background-position: 0 320px;
-    background-color: hsl(229, 57%, 11%);
+    background: hsl(229, 57%, 11%) url(images/bg-desktop.png) no-repeat bottom left / 100% auto;
 }
 
 main {
     display: grid;
+    place-items: center;
     justify-content: center;
     align-items: center;
     align-content: center;
+}
+
+.assets {
+    display: flex;
+    gap: 20px;
+}
+.btn {
+    display: grid;
+    place-items: center;
+    background: hsl(229, 57%, 11%);
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.asset-img{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .b-text {
@@ -99,7 +124,9 @@ main {
 
 @media screen and (max-width:799px) {
     body {
-        background: url(images/bg-mobile.png) no-repeat;
+        background: url(images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     main {
@@ -119,28 +146,7 @@ main {
     .img-logo {
         margin-bottom: 34px;
     }
-
-    .doc {
-        margin-right: 7px;
-        padding: 15px 14.3px;
-        background: hsl(229, 57%, 11%);
-        border-radius: 10px;
-    }
-
-    .folder {
-        margin-right: 7px;
-        padding: 17px 14.3px;
-        background: hsl(229, 57%, 11%);
-        border-radius: 10px;
-    }
-
-    .nube {
-
-        padding: 19px 14.3px;
-        background: hsl(229, 57%, 11%);
-        border-radius: 10px;
-    }
-
+ 
     .top-cont {
         grid-area: top-c;
         background: hsl(228, 56%, 26%);
@@ -149,6 +155,9 @@ main {
         margin-bottom: 16px;
     }
 
+    .btn {
+        display: block;
+    }
     .bottom-cont {
         grid-area: bottom-c;
         display: grid;
@@ -204,6 +213,7 @@ main {
     main {
         height: 100vh;
         display: flex;
+        flex-wrap: wrap;
     }
 
     .container {
@@ -240,29 +250,8 @@ main {
         margin-bottom: 32px;
     }
 
-    .doc {
-        margin-right: 7px;
-        padding: 15px 14.3px;
-        background: hsl(229, 57%, 11%);
-        border-radius: 10px;
-    }
-
-    .folder {
-        margin-right: 7px;
-        padding: 17px 14.3px;
-        background: hsl(229, 57%, 11%);
-        border-radius: 10px;
-    }
-
     .text {
         text-align: left;
-    }
-
-    .nube {
-
-        padding: 19px 14.3px;
-        background: hsl(229, 57%, 11%);
-        border-radius: 10px;
     }
 
     .thumb {
